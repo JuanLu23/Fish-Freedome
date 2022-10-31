@@ -4,14 +4,17 @@ using UnityEngine;
 
 public class Player_Movement : MonoBehaviour
 {
-    public float f_jumpForce;
+    public Rigidbody go_playerModel;
+    public GameObject go_directionArrow;
 
-    private float f_rotation;
+    public float f_jumpForce;
 
     public void Awake()
     {
-        f_rotation = gameObject.transform.rotation.y;
-        Debug.Log(f_rotation);
+        /*
+        go_playerModel = go_playerModel.transform.Find("Player_Model").GetComponent<Rigidbody>();
+        go_directionArrow = go_directionArrow.transform.Find("Arrow_Direction").GetComponent<GameObject>();
+        */
     }
 
     void Update()
@@ -22,16 +25,12 @@ public class Player_Movement : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.A))
         {
-            /*
-            f_rotation += 1.0f;
-            gameObject.transform.LookAt(f_rotation);
-            Debug.Log(f_rotation);
-            */
+            
         }
     }
 
     void Jump()
     {
-        gameObject.GetComponentInChildren<Rigidbody>().AddForce(gameObject.transform.forward * f_jumpForce, ForceMode.Impulse);
+        go_playerModel.AddForce(go_directionArrow.transform.forward * f_jumpForce, ForceMode.Impulse);
     }
 }
