@@ -401,9 +401,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   t_playerPosition: {fileID: 363068935}
-  q_startingPosition: {x: 0, y: 0, z: 0, w: 0}
-  f_rotationSpeed: 0.5
-  f_resetRotatioTime: 0
+  q_startingRotation: {x: 0.00880202, y: 0.008649721, z: 0.008649721, w: 0.9998864}
+  f_rotationSpeed: 0.2
+  f_resetRotationTime: 10
 --- !u!1001 &363068934
 PrefabInstance:
   m_ObjectHideFlags: 0

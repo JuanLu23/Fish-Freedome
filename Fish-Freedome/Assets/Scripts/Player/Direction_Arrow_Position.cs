@@ -6,10 +6,10 @@ public class Direction_Arrow_Position : MonoBehaviour
 {
 
     public Transform t_playerPosition;
-    public Quaternion q_startingPosition;
+    public Quaternion q_startingRotation;
 
     public float f_rotationSpeed;
-    public float f_resetRotatioTime;
+    public float f_resetRotationTime;
 
     private Vector3 v3_arrowPositionTransform;
 
@@ -38,12 +38,14 @@ public class Direction_Arrow_Position : MonoBehaviour
         {
             gameObject.transform.Rotate(-Vector3.right * f_rotationSpeed);
         }
-        if (Input.GetKeyDown(KeyCode.R))
+        if (Input.GetKey(KeyCode.R))
         {
-            gameObject.transform.rotation = Quaternion.Lerp(transform.rotation, q_startingPosition, Time.deltaTime * f_resetRotatioTime);
+            Reset_Rotation_To_Origin();
         }
 
     }
+
+    void Reset_Rotation_To_Origin() => this.transform.rotation = Quaternion.Lerp(this.transform.rotation, q_startingRotation, Time.deltaTime * f_resetRotationTime);
 
     void Arrow_Position()
     {
