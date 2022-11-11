@@ -9,28 +9,28 @@ public class Player_Movement : MonoBehaviour
 
     public float f_jumpForce;
 
-    public void Awake()
-    {
-        /*
-        go_playerModel = go_playerModel.transform.Find("Player_Model").GetComponent<Rigidbody>();
-        go_directionArrow = go_directionArrow.transform.Find("Arrow_Direction").GetComponent<GameObject>();
-        */
-    }
+    private float f_holdDownJumpButton;
 
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            Jump();
+            f_holdDownJumpButton = Time.time;
         }
-        if (Input.GetKeyDown(KeyCode.A))
+        else if (Input.GetKeyUp(KeyCode.Space))
         {
-            
+            float f_holdDownTime = Time.time - f_holdDownJumpButton;
+            Jump(f_holdDownTime);
         }
     }
 
-    void Jump()
+    private float Apply_Jump_Force(float f_holdTime)
     {
-        go_playerModel.AddForce(go_directionArrow.transform.forward * f_jumpForce, ForceMode.Impulse);
+        float maxHoldDownTime = 2.0f;
+        float holdTimeNormalized = Mathf.Clamp01(f_holdTime / maxHoldDownTime);
+        float f_finalJumpForce = holdTimeNormalized * f_jumpForce;
+        return f_finalJumpForce;
     }
+
+    void Jump(float f_holdTime) => go_playerModel.AddForce(go_directionArrow.transform.forward * Apply_Jump_Force(f_holdTime), ForceMode.Impulse);
 }
