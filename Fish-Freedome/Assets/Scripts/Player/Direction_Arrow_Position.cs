@@ -51,7 +51,7 @@ public class Direction_Arrow_Position : MonoBehaviour
     {
         v3_arrowPositionTransform.x = t_playerPosition.transform.position.x;
         v3_arrowPositionTransform.z = t_playerPosition.transform.position.z;
-        v3_arrowPositionTransform.y = t_playerPosition.transform.position.y + 2.0f;
+        v3_arrowPositionTransform.y = t_playerPosition.transform.position.y + 3.0f;
         this.transform.position = v3_arrowPositionTransform;
     }
 }  
