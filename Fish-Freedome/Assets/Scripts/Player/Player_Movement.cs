@@ -6,6 +6,7 @@ public class Player_Movement : MonoBehaviour
 {
     public Rigidbody go_playerModel;
     public GameObject go_directionArrow;
+    public Player_Collision_Detector script_collisionDetector;
 
     public float f_jumpForce;
 
@@ -13,14 +14,18 @@ public class Player_Movement : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if(script_collisionDetector.b_playerTouchingFloor == false) 
         {
-            f_holdDownJumpButton = Time.time;
-        }
-        else if (Input.GetKeyUp(KeyCode.Space))
-        {
-            float f_holdDownTime = Time.time - f_holdDownJumpButton;
-            Jump(f_holdDownTime);
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                f_holdDownJumpButton = Time.time;
+            }
+            else if (Input.GetKeyUp(KeyCode.Space))
+            {
+                script_collisionDetector.b_playerTouchingFloor = true;
+                float f_holdDownTime = Time.time - f_holdDownJumpButton;
+                Jump(f_holdDownTime);
+            }
         }
     }
 
