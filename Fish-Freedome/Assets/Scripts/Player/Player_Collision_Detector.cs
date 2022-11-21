@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class Player_Collision_Detector : MonoBehaviour
 {
-    public bool b_playerTouchingFloor = true;
+    public bool b_playerTouchingFloor;
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.collider.tag == "Floor")
+        if (collision.collider.tag == "Floor" || collision.collider.tag == null)
         {
-            b_playerTouchingFloor = false;
+            b_playerTouchingFloor = true;
         }
     }
 }

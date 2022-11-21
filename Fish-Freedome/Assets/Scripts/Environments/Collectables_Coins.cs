@@ -4,12 +4,19 @@ using UnityEngine;
 using UnityEngine.Events;
 public class Collectables_Coins : MonoBehaviour
 {
-    public UnityEvent ue_coinCollected;
+    private UI_Manager _uiManagerScript;
+
+    private void Awake()
+    {
+        _uiManagerScript = GameObject.Find("UI_Manager").GetComponent<UI_Manager>();
+    }
 
     private void OnTriggerEnter(Collider _collider)
     {
         if(_collider.tag == "Player")
         {
+            _uiManagerScript.i_currentAmountsofCoins += 1;
+            _uiManagerScript.Activate_Coin_In_UI();
             Destroy(this.gameObject);
         }
     }
