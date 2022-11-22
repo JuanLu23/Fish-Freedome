@@ -4,12 +4,10 @@ using UnityEngine;
 
 public class Game_Manager : MonoBehaviour
 {
-    private Player_Stats_Controller _playerStatsController;
-
+    public bool b_gameStarted = false;
 
     private void Start()
     {
-        _playerStatsController = GameObject.FindGameObjectWithTag("Player").GetComponent<Player_Stats_Controller>();
         StartCoroutine(Game_Start_Timer());
     }
 
@@ -19,7 +17,7 @@ public class Game_Manager : MonoBehaviour
         while (true)
         {
             yield return wait;
-            _playerStatsController.b_gameStarted = true;
+            b_gameStarted = true;
         }
     }
 

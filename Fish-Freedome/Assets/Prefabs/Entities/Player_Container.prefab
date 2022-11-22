@@ -65,6 +65,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45fe605cb7e868d4da7d37baac625ecc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  f_maxPlayerHP: 20
+  b_gameStarted: 0
+  b_playerExitSafeArea: 0
 --- !u!1001 &4541589763164822981
 PrefabInstance:
   m_ObjectHideFlags: 0

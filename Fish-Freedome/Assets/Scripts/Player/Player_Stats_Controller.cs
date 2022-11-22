@@ -11,9 +11,11 @@ public class Player_Stats_Controller : MonoBehaviour
     public bool b_playerExitSafeArea;
 
     private UI_Manager _uiManagerScript;
+    private Game_Manager _gameManagerScript;
 
     private void Start()
     {
+        _gameManagerScript = GameObject.Find("Game_Manager").GetComponent<Game_Manager>();
         _uiManagerScript = GameObject.Find("UI_Manager").GetComponent<UI_Manager>();
         _uiManagerScript.SetMaxSliderValue(f_maxPlayerHP);
         f_currentPlayerHP = f_maxPlayerHP;
@@ -21,6 +23,7 @@ public class Player_Stats_Controller : MonoBehaviour
 
     private void Update()
     {
+        b_gameStarted = _gameManagerScript.b_gameStarted;
         if (b_gameStarted)
         {
             if (b_playerExitSafeArea)
