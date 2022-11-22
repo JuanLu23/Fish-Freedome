@@ -254,7 +254,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   t_playerPosition: {fileID: 4074718275219503662}
   q_startingRotation: {x: 0.00880202, y: 0.008649721, z: 0.008649721, w: 0.9998864}
-  f_rotationSpeed: 0.2
+  f_rotationSpeed: 0.5
   f_resetRotationTime: 10
 --- !u!4 &4074718275046070388 stripped
 Transform:

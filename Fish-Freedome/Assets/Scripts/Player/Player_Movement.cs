@@ -29,7 +29,7 @@ public class Player_Movement : MonoBehaviour
 
     void Update()
     {
-        if (_playerStatsController.b_gameStarted == true)
+        if (_playerStatsController.b_gameStarted)
         {
             if (script_collisionDetector.b_playerTouchingFloor == true)
             {

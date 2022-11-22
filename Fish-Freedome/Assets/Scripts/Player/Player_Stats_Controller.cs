@@ -23,7 +23,7 @@ public class Player_Stats_Controller : MonoBehaviour
 
     private void Update()
     {
-        b_gameStarted = _gameManagerScript.b_gameStarted;
+        b_gameStarted = _gameManagerScript.b_enableControlls;
         if (b_gameStarted)
         {
             if (b_playerExitSafeArea)
@@ -33,17 +33,20 @@ public class Player_Stats_Controller : MonoBehaviour
                     _uiManagerScript.SetSliderValue(f_currentPlayerHP);
                     f_currentPlayerHP -= Time.deltaTime;
                 }
+                else if (f_currentPlayerHP <= 0)
+                {
+                    _gameManagerScript.b_playerDied = true;
+                }
             }
             else if (!b_playerExitSafeArea)
             {
                 if(f_currentPlayerHP > 0)
                 {
-                    _uiManagerScript.SetSliderValue(f_currentPlayerHP);
-                    f_currentPlayerHP += Time.deltaTime;
-                }
-                else if (f_currentPlayerHP <= 0)
-                {
-                    //player dead
+                    if(f_currentPlayerHP <= f_maxPlayerHP)
+                    {
+                        _uiManagerScript.SetSliderValue(f_currentPlayerHP);
+                        f_currentPlayerHP += Time.deltaTime;
+                    }
                 }
             }
         }

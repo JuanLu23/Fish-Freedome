@@ -4,11 +4,28 @@ using UnityEngine;
 
 public class Game_Manager : MonoBehaviour
 {
-    public bool b_gameStarted = false;
+    public bool b_enableControlls = false;
+    public bool b_playerDied;
+
+    public Finish_Line_Collider finish_Line_Collider;
 
     private void OnEnable()
     {
+        b_playerDied = false;
+        finish_Line_Collider = GameObject.Find("Finish_Line_Collider").GetComponent<Finish_Line_Collider>();
         StartCoroutine(Game_Start_Timer());
+    }
+
+    private void Update()
+    {
+        if (finish_Line_Collider.b_playerCrossedFinishLine)
+        {
+            Debug.Log("Player finished");
+        }
+        if (b_playerDied)
+        {
+            Debug.Log("Player Died");
+        }
     }
 
     private IEnumerator Game_Start_Timer()
@@ -17,16 +34,10 @@ public class Game_Manager : MonoBehaviour
         while (true)
         {
             yield return wait;
-            b_gameStarted = true;
+            b_enableControlls = true;
         }
     }
 
-    private void OnTriggerEnter(Collider other)
-    {
-        if(other.tag == "Player")
-        {
-            Debug.Log("GAME WON");
-        }
-    }
+    
 
 }
