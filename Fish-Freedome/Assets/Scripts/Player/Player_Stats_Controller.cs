@@ -13,7 +13,7 @@ public class Player_Stats_Controller : MonoBehaviour
     private UI_Manager _uiManagerScript;
     private Game_Manager _gameManagerScript;
 
-    private void Start()
+    private void OnEnable()
     {
         _gameManagerScript = GameObject.Find("Game_Manager").GetComponent<Game_Manager>();
         _uiManagerScript = GameObject.Find("UI_Manager").GetComponent<UI_Manager>();

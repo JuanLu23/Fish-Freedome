@@ -6,7 +6,7 @@ public class Game_Manager : MonoBehaviour
 {
     public bool b_gameStarted = false;
 
-    private void Start()
+    private void OnEnable()
     {
         StartCoroutine(Game_Start_Timer());
     }

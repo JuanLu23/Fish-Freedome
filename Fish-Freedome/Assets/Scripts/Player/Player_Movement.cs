@@ -20,7 +20,7 @@ public class Player_Movement : MonoBehaviour
 
     private float f_holdDownJumpButton;
 
-    private void Start()
+    private void OnEnable()
     {
         _playerStatsController = this.gameObject.GetComponent<Player_Stats_Controller>();
         c_greenColor = go_directionArrow.GetComponent<Renderer>().materials[1].color;

@@ -8,6 +8,7 @@ TagManager:
   - Obstacle
   - Prop
   - Collectable
+  - Wall
   layers:
   - Default
   - TransparentFX

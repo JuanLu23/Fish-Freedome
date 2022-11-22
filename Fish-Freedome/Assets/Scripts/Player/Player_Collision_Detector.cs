@@ -6,7 +6,7 @@ public class Player_Collision_Detector : MonoBehaviour
 {
     public bool b_playerTouchingFloor;
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnCollisionStay(Collision collision)
     {
         if (collision.collider.tag == "Floor" || collision.collider.tag == null)
         {

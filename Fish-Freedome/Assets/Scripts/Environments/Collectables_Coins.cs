@@ -6,7 +6,7 @@ public class Collectables_Coins : MonoBehaviour
 {
     private UI_Manager _uiManagerScript;
 
-    private void Awake()
+    private void OnEnable()
     {
         _uiManagerScript = GameObject.Find("UI_Manager").GetComponent<UI_Manager>();
     }
