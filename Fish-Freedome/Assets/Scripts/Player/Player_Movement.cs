@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class Player_Movement : MonoBehaviour
 {
+
+    public AudioSource _audioSource;
+
     public Material m_redColor;
     public Material m_darkRedColor;
 
@@ -22,6 +25,7 @@ public class Player_Movement : MonoBehaviour
 
     private void OnEnable()
     {
+        _audioSource.Play();
         _playerStatsController = this.gameObject.GetComponent<Player_Stats_Controller>();
         c_greenColor = go_directionArrow.GetComponent<Renderer>().materials[1].color;
         c_darkGreenColor = go_directionArrow.GetComponent <Renderer>().materials[0].color;
@@ -44,6 +48,7 @@ public class Player_Movement : MonoBehaviour
                 }
                 if (Input.GetKeyUp(KeyCode.Space))
                 {
+                    _audioSource.Play();
                     script_collisionDetector.b_playerTouchingFloor = false;
                     Reset_Direction_Arrow_Color();
                     float f_holdDownTime = Time.time - f_holdDownJumpButton;

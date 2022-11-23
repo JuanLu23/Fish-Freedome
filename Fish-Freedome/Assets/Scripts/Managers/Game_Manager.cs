@@ -1,9 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Game_Manager : MonoBehaviour
 {
+    public UnityEvent activateGameOverScreen;
+    public UnityEvent acticateWinScreen;
+
     public bool b_enableControlls = false;
     public bool b_playerDied;
 
@@ -20,11 +24,11 @@ public class Game_Manager : MonoBehaviour
     {
         if (finish_Line_Collider.b_playerCrossedFinishLine)
         {
-            Debug.Log("Player finished");
+            acticateWinScreen.Invoke();
         }
         if (b_playerDied)
         {
-            Debug.Log("Player Died");
+            activateGameOverScreen.Invoke();
         }
     }
 
