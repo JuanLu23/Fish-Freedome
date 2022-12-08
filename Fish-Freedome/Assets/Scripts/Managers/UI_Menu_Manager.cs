@@ -78,5 +78,7 @@ public class UI_Menu_Manager : MonoBehaviour
     public void Start_Game()
     {
         SceneManager.LoadScene("Level_01_Scene");
+        Time.timeScale = 1;
+
     }
 }

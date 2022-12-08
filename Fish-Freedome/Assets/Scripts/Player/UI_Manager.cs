@@ -7,7 +7,9 @@ public class UI_Manager : MonoBehaviour
 {
     public Slider s_slider;
 
-    public int i_maxAmountofCoins;
+    // COMENTARIO PARA IAN
+    // Caballero aqui es donde se esta sacando la variable de cuantas monedas el pleyer recolecto en el nivel
+    public int i_maxAmountofCoinsCollected; // <--- Esta es la variable, si la cambias avisame por que tambien hay que cambiarla en el codigo "Stage_Selec_Button"
     public int i_currentAmountsofCoins;
 
     public RawImage[] ri_CollectedCoin;

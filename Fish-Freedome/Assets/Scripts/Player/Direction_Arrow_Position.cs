@@ -45,7 +45,7 @@ public class Direction_Arrow_Position : MonoBehaviour
 
     }
 
-    void Reset_Rotation_To_Origin() => this.transform.rotation = Quaternion.Lerp(this.transform.rotation, q_startingRotation, Time.deltaTime * f_resetRotationTime);
+    void Reset_Rotation_To_Origin() => this.transform.rotation = Quaternion.Lerp(this.transform.rotation, q_startingRotation, Time.time * f_resetRotationTime);
 
     void Arrow_Position()
     {
