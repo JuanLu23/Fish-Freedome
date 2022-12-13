@@ -9,6 +9,7 @@ TagManager:
   - Prop
   - Collectable
   - Wall
+  - Exit
   layers:
   - Default
   - TransparentFX

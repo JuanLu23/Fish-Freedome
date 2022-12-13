@@ -13,18 +13,24 @@ public class UI_Manager : MonoBehaviour, ISavable
     public int i_maxAmountofCoinsCollected; // <--- Esta es la variable, si la cambias avisame por que tambien hay que cambiarla en el codigo "Stage_Selec_Button"
     public int i_currentAmountsofCoins;
     public int currentLevel;
+    public int coinCount1;
+    public int coinCount2;
+    public int coinCount3;
 
     public RawImage[] ri_CollectedCoin;
 
-    void Start()
+    void Update()
     {
         switch (currentLevel)
         {
             case 1:
+                coinCount1 = i_maxAmountofCoinsCollected;
                 break;
             case 2:
+                coinCount2 = i_maxAmountofCoinsCollected;
                 break;
             case 3:
+                coinCount3 = i_maxAmountofCoinsCollected;
                 break;
         }
     }
