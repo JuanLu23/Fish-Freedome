@@ -1,9 +1,10 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class UI_Manager : MonoBehaviour
+public class UI_Manager : MonoBehaviour, ISavable
 {
     public Slider s_slider;
 
@@ -11,8 +12,22 @@ public class UI_Manager : MonoBehaviour
     // Caballero aqui es donde se esta sacando la variable de cuantas monedas el pleyer recolecto en el nivel
     public int i_maxAmountofCoinsCollected; // <--- Esta es la variable, si la cambias avisame por que tambien hay que cambiarla en el codigo "Stage_Selec_Button"
     public int i_currentAmountsofCoins;
+    public int currentLevel;
 
     public RawImage[] ri_CollectedCoin;
+
+    void Start()
+    {
+        switch (currentLevel)
+        {
+            case 1:
+                break;
+            case 2:
+                break;
+            case 3:
+                break;
+        }
+    }
 
     public void SetMaxSliderValue(float _health)
     {
@@ -39,5 +54,25 @@ public class UI_Manager : MonoBehaviour
                 ri_CollectedCoin[2].gameObject.SetActive(true);
                 break;
         }
+    }
+
+    public object SaveState()
+    {
+        return new SaveData()
+        {
+            i_maxAmountofCoinsCollected = this.i_maxAmountofCoinsCollected
+        };
+    }
+
+    public void LoadState(object state)
+    {
+        var saveData = (SaveData)state;
+        i_maxAmountofCoinsCollected = saveData.i_maxAmountofCoinsCollected;
+    }
+
+    [Serializable]
+    private struct SaveData
+    {
+        public int i_maxAmountofCoinsCollected;
     }
 }

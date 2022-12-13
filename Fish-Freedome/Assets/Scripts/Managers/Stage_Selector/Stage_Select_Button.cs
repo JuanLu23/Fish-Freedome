@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -47,4 +48,25 @@ public class Stage_Select_Button : MonoBehaviour
                 break;
         }
     }
+
+    /*public object SaveState()
+    {
+        return new SaveData()
+        {
+            i_currentAmountsofCoins = Stage_Select_Button.i_currentAmountsofCoins
+        };
+    }
+
+    public void LoadState(object state)
+    {
+        var saveData = (SaveData)state;
+        i_currentAmountsofCoins = saveData.i_currentAmountsofCoins;
+    }
+
+    [Serializable]
+    private struct SaveData
+    {
+        public int i_currentAmountsofCoins;
+    }¨*/
+
 }
