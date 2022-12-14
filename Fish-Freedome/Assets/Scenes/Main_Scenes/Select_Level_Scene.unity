@@ -231,6 +231,9 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 70fab42a964c81e44a9acc99e10abaf8, type: 2}
   - {fileID: 11400000, guid: 418f50d134f21074394aa2b612687a29, type: 2}
   totalAmountofCoins: 0
+  coinscollected1: 0
+  coinscollected2: 0
+  coinscollected3: 0
 --- !u!4 &621264698
 Transform:
   m_ObjectHideFlags: 0
@@ -277,7 +280,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &626116455
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1468,7 +1471,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1692424403
 RectTransform:
   m_ObjectHideFlags: 0
