@@ -562,7 +562,7 @@ RectTransform:
   m_GameObject: {fileID: 136667996}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.3889, y: 1.3889, z: 1.3889}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1877686240}
@@ -571,7 +571,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 46, y: 37}
+  m_AnchoredPosition: {x: 46, y: 29}
   m_SizeDelta: {x: 227.02002, y: 443.6}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &136667998
@@ -3354,7 +3354,7 @@ MonoBehaviour:
 
     Use
     keys WASD to move the arrow and hold SPACE then release it to jump (the longer
-    you hold SPACE the longer it jumps).
+    you hold SPACE the higher it jumps).
 
 '
   m_isRightToLeft: 0
