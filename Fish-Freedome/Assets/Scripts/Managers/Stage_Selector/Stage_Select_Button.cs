@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Stage_Select_Button : MonoBehaviour
 {
@@ -27,7 +28,7 @@ public class Stage_Select_Button : MonoBehaviour
 
     public void Unlock_Button()
     {
-        if(totalAmountOfCoins >= amountOfCoinToUnlock)
+        if (totalAmountOfCoins >= amountOfCoinToUnlock)
         {
             go_stage_Lock.SetActive(false);
         }
@@ -47,6 +48,26 @@ public class Stage_Select_Button : MonoBehaviour
                 ri_stageCardCollectedCoin[2].gameObject.SetActive(true);
                 break;
         }
+    }
+
+    public void StageOne()
+    {
+        SceneManager.LoadScene("Level_01_Scene");
+    }
+
+    public void StageTwo()
+    {
+        SceneManager.LoadScene("Level_02_Scene");
+    }
+
+    public void StageThree()
+    {
+        SceneManager.LoadScene("Level_03_Scene");
+    }
+
+    public void StageTutorial()
+    {
+        SceneManager.LoadScene("Tutorial_Scene");
     }
 
     /*public object SaveState()

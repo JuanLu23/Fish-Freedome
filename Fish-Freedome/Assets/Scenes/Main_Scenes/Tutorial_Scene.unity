@@ -1945,6 +1945,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 3841804162658628017, guid: 639cbf867311c2045b897c991dd9eb0d, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: ca8a904a1f9a9314bbb189ab05476d06, type: 3}
     - target: {fileID: 4541589762065156944, guid: 639cbf867311c2045b897c991dd9eb0d, type: 3}
       propertyPath: m_RootOrder
       value: 1
