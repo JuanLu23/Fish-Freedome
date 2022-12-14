@@ -17,6 +17,8 @@ public class UI_Manager : MonoBehaviour, ISavable
     public int coinCount2;
     public int coinCount3;
 
+    public int currentLevelNumber;
+
     public RawImage[] ri_CollectedCoin;
 
     void Update()
