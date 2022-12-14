@@ -19,8 +19,11 @@ EditorBuildSettings:
     guid: 97a661ac30bb25f41b470c52642ca053
   - enabled: 1
     path: Assets/Scenes/Main_Scenes/Level_02_Scene.unity
+    guid: 7ef6d2aee8aa15249bedcd77ea67fea0
+  - enabled: 1
+    path: Assets/Scenes/Main_Scenes/Ian_WHY_XD.unity
     guid: bd0dc93e5cb897949a685194d5a5f890
   - enabled: 1
-    path: Assets/Scenes/Main_Scenes/Level_3.unity
+    path: Assets/Scenes/Main_Scenes/Level_03_Scene.unity
     guid: 41c179d69cbb85244bbbdaca805ee633
   m_configObjects: {}

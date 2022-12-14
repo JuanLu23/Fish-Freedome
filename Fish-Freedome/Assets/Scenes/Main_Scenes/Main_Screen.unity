@@ -255,8 +255,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4712e5a22112a74ebd88eec443fd7cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  stageManager: {fileID: 0}
   ri_stageCardCollectedCoin: []
   go_stage_Lock: {fileID: 0}
+  i_levelNumber: 0
   amountOfCoinToUnlock: 0
 --- !u!1 &143806699
 GameObject:
@@ -12526,7 +12528,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &6129883139004118402
 RectTransform:
   m_ObjectHideFlags: 0

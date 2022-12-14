@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class UI_Manager : MonoBehaviour, ISavable
+public class UI_Manager : MonoBehaviour
 {
     private Game_Manager gameManager;
 
@@ -54,10 +54,14 @@ public class UI_Manager : MonoBehaviour, ISavable
 
     private void Save_in_Data_Coins_Obtained()
     {
-        s_data.coinsCollected = i_currentAmountsofCoins;
+        if (i_currentAmountsofCoins > s_data.coinsCollected)
+        {
+            s_data.coinsCollected = i_currentAmountsofCoins;
+        }
+        
     }
 
-    public object SaveState()
+    /*public object SaveState()
     {
         return new SaveData()
         {
@@ -75,5 +79,5 @@ public class UI_Manager : MonoBehaviour, ISavable
     private struct SaveData
     {
         public int i_currentAmountsofCoins;
-    }
+    }*/
 }

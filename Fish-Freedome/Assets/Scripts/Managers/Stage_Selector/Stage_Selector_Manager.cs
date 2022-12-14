@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,7 +9,7 @@ public class Stage_Selector_Manager : MonoBehaviour
 
     public int totalAmountofCoins;
 
-    private void Awake()
+    private void Start()
     {
         RundDownInfo();
     }
@@ -20,4 +21,24 @@ public class Stage_Selector_Manager : MonoBehaviour
             //Debug.Log(stageData[i].coinsCollected);
         }
     }
+
+    /*public object SaveState()
+    {
+        return new SaveData()
+        {
+            stageData = this.stageData
+        };
+    }
+
+    public void LoadState(object state)
+    {
+        var saveData = (SaveData)state;
+        stageData = saveData.stageData;
+    }
+
+    [Serializable]
+    private struct SaveData
+    {
+        public Stage_Data[] stageData;
+    }*/
 }

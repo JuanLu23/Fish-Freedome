@@ -66,7 +66,7 @@ public class UI_Menu_Manager : MonoBehaviour
 
     public void Return_to_Main_Menu()
     {
-        SceneManager.LoadScene("Main_Screen");
+        SceneManager.LoadScene("Select_Level_Scene");
         Time.timeScale = 1;
     }
 

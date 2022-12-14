@@ -23,6 +23,11 @@ public class Stage_Select_Button : MonoBehaviour
     {
         stageManager = GameObject.FindGameObjectWithTag("Stage Select Manager").GetComponent<Stage_Selector_Manager>();
         Unlock_Button();
+        
+    }
+
+    public void Update()
+    {
         Activate_Coin_In_UI();
     }
 
