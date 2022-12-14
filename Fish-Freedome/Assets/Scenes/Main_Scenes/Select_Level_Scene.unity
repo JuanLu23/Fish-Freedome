@@ -208,7 +208,7 @@ GameObject:
   - component: {fileID: 621264697}
   m_Layer: 0
   m_Name: Stage_Select_Manager
-  m_TagString: Untagged
+  m_TagString: Stage Select Manager
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -226,7 +226,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stageData:
-  - {fileID: 11400000, guid: 76185e989e96c3746a5df2ba5038f43e, type: 2}
+  - {fileID: 11400000, guid: a4fcee1aead1ca747be448c70aaac663, type: 2}
+  - {fileID: 11400000, guid: 70fab42a964c81e44a9acc99e10abaf8, type: 2}
+  - {fileID: 11400000, guid: 418f50d134f21074394aa2b612687a29, type: 2}
+  totalAmountofCoins: 0
 --- !u!4 &621264698
 Transform:
   m_ObjectHideFlags: 0
@@ -400,6 +403,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1968639503}
     m_Modifications:
+    - target: {fileID: 1028756130925481257, guid: 3ad8e0a94f5ba7144bb41d0a008e02f2, type: 3}
+      propertyPath: stageManager
+      value: 
+      objectReference: {fileID: 621264697}
+    - target: {fileID: 1028756130925481257, guid: 3ad8e0a94f5ba7144bb41d0a008e02f2, type: 3}
+      propertyPath: i_levelNumber
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 7183693290653678907, guid: 3ad8e0a94f5ba7144bb41d0a008e02f2, type: 3}
       propertyPath: m_text
       value: 002
@@ -768,6 +779,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1968639503}
     m_Modifications:
+    - target: {fileID: 1028756130925481257, guid: 3ad8e0a94f5ba7144bb41d0a008e02f2, type: 3}
+      propertyPath: stageManager
+      value: 
+      objectReference: {fileID: 621264697}
+    - target: {fileID: 1028756130925481257, guid: 3ad8e0a94f5ba7144bb41d0a008e02f2, type: 3}
+      propertyPath: i_levelNumber
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 7183693290653678907, guid: 3ad8e0a94f5ba7144bb41d0a008e02f2, type: 3}
       propertyPath: m_text
       value: 003
@@ -1108,11 +1127,31 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1968639503}
     m_Modifications:
+    - target: {fileID: 1028756130925481257, guid: 3ad8e0a94f5ba7144bb41d0a008e02f2, type: 3}
+      propertyPath: stageManager
+      value: 
+      objectReference: {fileID: 621264697}
+    - target: {fileID: 1028756130925481257, guid: 3ad8e0a94f5ba7144bb41d0a008e02f2, type: 3}
+      propertyPath: i_levelNumber
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183693290346180039, guid: 3ad8e0a94f5ba7144bb41d0a008e02f2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7183693290653678907, guid: 3ad8e0a94f5ba7144bb41d0a008e02f2, type: 3}
       propertyPath: m_text
       value: 001
       objectReference: {fileID: 0}
     - target: {fileID: 7183693291154272681, guid: 3ad8e0a94f5ba7144bb41d0a008e02f2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183693291546179573, guid: 3ad8e0a94f5ba7144bb41d0a008e02f2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183693291599539193, guid: 3ad8e0a94f5ba7144bb41d0a008e02f2, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}

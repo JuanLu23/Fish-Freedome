@@ -952,6 +952,9 @@ MonoBehaviour:
   acticateWinScreen:
     m_PersistentCalls:
       m_Calls: []
+  recordCoinsObtained:
+    m_PersistentCalls:
+      m_Calls: []
   b_enableControlls: 0
   b_playerDied: 0
   finish_Line_Collider: {fileID: 567885235}
@@ -2568,6 +2571,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5824572397192465594, guid: 9c233e85bd7f9b441884d71155099bf9, type: 3}
+      propertyPath: s_data
+      value: 
+      objectReference: {fileID: 11400000, guid: 70fab42a964c81e44a9acc99e10abaf8, type: 2}
     - target: {fileID: 5824572398151474479, guid: 9c233e85bd7f9b441884d71155099bf9, type: 3}
       propertyPath: m_Value
       value: 20
@@ -2717,7 +2724,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 2.1793928, y: 1}
+    m_SensorSize: {x: 1.7777778, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0

@@ -7,6 +7,7 @@ public class Game_Manager : MonoBehaviour
 {
     public UnityEvent activateGameOverScreen;
     public UnityEvent acticateWinScreen;
+    public UnityEvent recordCoinsObtained;
 
     public bool b_enableControlls = false;
     public bool b_playerDied;
@@ -24,11 +25,13 @@ public class Game_Manager : MonoBehaviour
     {
         if (finish_Line_Collider.b_playerCrossedFinishLine)
         {
+            recordCoinsObtained.Invoke();
             acticateWinScreen.Invoke();
         }
         if (b_playerDied)
         {
             activateGameOverScreen.Invoke();
+            recordCoinsObtained.Invoke();
         }
     }
 
