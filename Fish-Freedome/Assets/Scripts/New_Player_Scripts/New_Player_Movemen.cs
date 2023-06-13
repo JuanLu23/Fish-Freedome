@@ -10,7 +10,6 @@ public class New_Player_Movemen : MonoBehaviour
     private New_Player_Stats playerStats;
     private Transform parrentTransform;
     private Rigidbody childrenRigidbody;
-    private bool playerIsOnFloor;
 
     private void Start()
     {
@@ -26,7 +25,7 @@ public class New_Player_Movemen : MonoBehaviour
     {
         Vector2 move = playerStats.playerMove.ReadValue<Vector2>();
         
-        if (move != Vector2.zero && playerStats.playerIsOnFloor)
+        if (move != Vector2.zero)
         {
             Vector3 force = new Vector3(move.x, 0, move.y);
 
@@ -40,7 +39,9 @@ public class New_Player_Movemen : MonoBehaviour
         if (playerStats.playerIsOnFloor)
         {
             Debug.Log("Floor");
-            childrenRigidbody.velocity += (gameObject.transform.up * playerStats.playerJumpForce * Time.deltaTime);
+            playerStats.playerIsOnFloor = false;
+            childrenRigidbody.velocity += (gameObject.transform.up * playerStats.playerJumpForce);
+            Debug.Log(childrenRigidbody.velocity);
             //playerRigidbody.AddForce(GetComponentInParent<Transform>().forward * playerStats.playerJumpForce * Time.deltaTime, ForceMode.Impulse);
         }
     }

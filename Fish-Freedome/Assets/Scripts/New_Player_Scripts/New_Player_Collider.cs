@@ -18,8 +18,4 @@ public class New_Player_Collider : MonoBehaviour
             playerStats.playerIsOnFloor = true;
         }
     }
-    private void OnCollisionExit(Collision collision)
-    {
-        playerStats.playerIsOnFloor = false;
-    }
 }
