@@ -67,7 +67,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45fe605cb7e868d4da7d37baac625ecc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  f_maxPlayerHP: 20
+  f_maxPlayerHP: 40
   b_gameStarted: 0
   b_playerExitSafeArea: 0
 --- !u!1 &6916002454400583491
@@ -384,7 +384,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   t_playerPosition: {fileID: 4074718275219503662}
   q_startingRotation: {x: 0.00880202, y: 0.008649721, z: 0.008649721, w: 0.9998864}
-  f_rotationSpeed: 0.5
+  f_rotationSpeed: 2
   f_resetRotationTime: 10
 --- !u!4 &4074718275046070388 stripped
 Transform:

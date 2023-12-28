@@ -31,7 +31,7 @@ public class Player_Stats_Controller : MonoBehaviour
                 if (f_currentPlayerHP > 0)
                 {
                     _uiManagerScript.SetSliderValue(f_currentPlayerHP);
-                    f_currentPlayerHP -= Time.deltaTime;
+                    f_currentPlayerHP -= (Time.deltaTime * 1);
                 }
                 else if (f_currentPlayerHP <= 0)
                 {
@@ -45,7 +45,7 @@ public class Player_Stats_Controller : MonoBehaviour
                     if(f_currentPlayerHP <= f_maxPlayerHP)
                     {
                         _uiManagerScript.SetSliderValue(f_currentPlayerHP);
-                        f_currentPlayerHP += Time.deltaTime;
+                        f_currentPlayerHP += (Time.deltaTime * 5.0f);
                     }
                 }
             }

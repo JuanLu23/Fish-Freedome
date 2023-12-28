@@ -15,6 +15,7 @@ public class New_Player_Collider : MonoBehaviour
     {
         if (collision.collider.tag == "Floor")
         {
+            Debug.Log("Is on floor");
             playerStats.playerIsOnFloor = true;
         }
     }
